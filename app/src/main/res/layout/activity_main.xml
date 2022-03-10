@@ -46,13 +46,15 @@
         android:id="@+id/scroll_vertical"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/header_konten"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/header_konten"
+        app:layout_constraintBottom_toTopOf="@id/control_menu_bawah">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <!--Menu-->
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -62,20 +64,20 @@
                 android:layout_margin="14dp"
                 android:background="@drawable/round_small"
                 android:backgroundTint="@color/hijau_tua"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent">
+                app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
                     android:id="@+id/kotak_saldo"
-                    android:layout_margin="10dp"
                     android:layout_width="120dp"
                     android:layout_height="64dp"
+                    android:layout_margin="10dp"
                     android:background="@drawable/round_small"
                     android:backgroundTint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
                     android:id="@+id/ic_gopay_satu"
@@ -85,33 +87,33 @@
                     android:adjustViewBounds="true"
                     android:scaleType="fitCenter"
                     android:src="@drawable/gpopay_blank"
+                    app:layout_constraintBottom_toTopOf="@id/caption_gopay"
                     app:layout_constraintStart_toStartOf="@id/kotak_saldo"
-                    app:layout_constraintTop_toTopOf="@id/kotak_saldo"
-                    app:layout_constraintBottom_toTopOf="@id/caption_gopay"/>
+                    app:layout_constraintTop_toTopOf="@id/kotak_saldo" />
 
                 <TextView
                     android:id="@+id/caption_gopay"
-                    android:text="@string/caption_gopay"
-                    android:textSize="@dimen/font_size_menu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintTop_toBottomOf="@id/ic_gopay_satu"
-                    app:layout_constraintStart_toStartOf="@id/ic_gopay_satu"
+                    android:text="@string/caption_gopay"
+                    android:textSize="@dimen/font_size_menu"
                     app:layout_constraintBottom_toBottomOf="@id/kotak_saldo"
-                    tools:ignore="SmallSp"/>
+                    app:layout_constraintStart_toStartOf="@id/ic_gopay_satu"
+                    app:layout_constraintTop_toBottomOf="@id/ic_gopay_satu"
+                    tools:ignore="SmallSp" />
 
                 <ImageButton
                     android:id="@+id/bayar"
-                    android:src="@drawable/bayar"
-                    android:background="@color/transparant"
                     android:layout_width="24dp"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
+                    android:background="@color/transparant"
                     android:scaleType="fitCenter"
-                    app:layout_constraintStart_toEndOf="@id/kotak_saldo"
-                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/bayar"
                     app:layout_constraintBottom_toTopOf="@id/desc_bayar"
-                    app:layout_constraintEnd_toStartOf="@id/ic_isi_saldo"/>
+                    app:layout_constraintEnd_toStartOf="@id/ic_isi_saldo"
+                    app:layout_constraintStart_toEndOf="@id/kotak_saldo"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/desc_bayar"
@@ -127,53 +129,53 @@
 
                 <ImageButton
                     android:id="@+id/ic_isi_saldo"
-                    android:src="@drawable/isi_saldo"
-                    android:background="@color/transparant"
                     android:layout_width="24dp"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
+                    android:background="@color/transparant"
                     android:scaleType="fitCenter"
-                    app:layout_constraintStart_toEndOf="@id/bayar"
-                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/isi_saldo"
                     app:layout_constraintBottom_toTopOf="@id/desc_isi_saldo"
-                    app:layout_constraintEnd_toStartOf="@id/ic_eksplor"/>
+                    app:layout_constraintEnd_toStartOf="@id/ic_eksplor"
+                    app:layout_constraintStart_toEndOf="@id/bayar"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/desc_isi_saldo"
-                    android:text="Isi Saldo"
-                    android:textSize="@dimen/font_size_menu"
-                    android:textColor="@color/white"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintTop_toBottomOf="@id/ic_isi_saldo"
-                    app:layout_constraintStart_toStartOf="@id/ic_isi_saldo"
+                    android:text="Isi Saldo"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_menu"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@id/ic_isi_saldo"
-                    app:layout_constraintBottom_toBottomOf="parent"/>
+                    app:layout_constraintStart_toStartOf="@id/ic_isi_saldo"
+                    app:layout_constraintTop_toBottomOf="@id/ic_isi_saldo" />
 
                 <ImageButton
                     android:id="@+id/ic_eksplor"
-                    android:src="@drawable/eksplor"
-                    android:background="@color/transparant"
                     android:layout_width="24dp"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
+                    android:background="@color/transparant"
                     android:scaleType="fitCenter"
-                    app:layout_constraintStart_toEndOf="@id/ic_isi_saldo"
-                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/eksplor"
                     app:layout_constraintBottom_toTopOf="@id/desc_eksplor"
-                    app:layout_constraintEnd_toEndOf="parent"/>
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ic_isi_saldo"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/desc_eksplor"
-                    android:text="Isi Saldo"
-                    android:textSize="@dimen/font_size_menu"
-                    android:textColor="@color/white"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintTop_toBottomOf="@id/ic_eksplor"
-                    app:layout_constraintStart_toStartOf="@id/ic_eksplor"
+                    android:text="Isi Saldo"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_menu"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@id/ic_eksplor"
-                    app:layout_constraintBottom_toBottomOf="parent"/>
+                    app:layout_constraintStart_toStartOf="@id/ic_eksplor"
+                    app:layout_constraintTop_toBottomOf="@id/ic_eksplor" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -183,9 +185,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="14dp"
-                app:layout_constraintTop_toBottomOf="@id/menu_gopay"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent">
+                app:layout_constraintTop_toBottomOf="@id/menu_gopay">
 
                 <!--GoRide-->
                 <ImageButton
@@ -193,8 +195,8 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:layout_marginEnd="14dp"
-                    android:scaleType="fitCenter"
                     android:background="@color/transparant"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/goride"
                     app:layout_constraintEnd_toStartOf="@id/ic_gocar"
                     app:layout_constraintStart_toStartOf="parent"
@@ -216,8 +218,8 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:layout_marginEnd="14dp"
-                    android:scaleType="fitCenter"
                     android:background="@color/transparant"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/gocar"
                     app:layout_constraintEnd_toStartOf="@id/ic_gofood"
                     app:layout_constraintStart_toEndOf="@id/ic_goride"
@@ -239,8 +241,8 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:layout_marginEnd="14dp"
-                    android:scaleType="fitCenter"
                     android:background="@color/transparant"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/gofood"
                     app:layout_constraintEnd_toStartOf="@id/ic_gosend"
                     app:layout_constraintStart_toEndOf="@id/ic_gocar"
@@ -262,13 +264,12 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:layout_marginEnd="14dp"
-                    android:scaleType="fitCenter"
                     android:background="@color/transparant"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/gosend"
-                    app:layout_constraintEnd_toStartOf=""
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/ic_gofood"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/dsc_gosend"
@@ -281,7 +282,6 @@
                     app:layout_constraintTop_toBottomOf="@id/ic_gosend" />
 
 
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <!--List Menu Baris Kedua-->
@@ -290,9 +290,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="14dp"
-                app:layout_constraintTop_toBottomOf="@id/list_menu_satu"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent">
+                app:layout_constraintTop_toBottomOf="@id/list_menu_satu">
 
                 <!--GoMart-->
                 <ImageButton
@@ -300,8 +300,8 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:layout_marginEnd="14dp"
-                    android:scaleType="fitCenter"
                     android:background="@color/transparant"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/gomart"
                     app:layout_constraintEnd_toStartOf="@id/ic_gopulsa"
                     app:layout_constraintStart_toStartOf="parent"
@@ -323,8 +323,8 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:layout_marginEnd="14dp"
-                    android:scaleType="fitCenter"
                     android:background="@color/transparant"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/gopulsa"
                     app:layout_constraintEnd_toStartOf="@id/ic_check_in"
                     app:layout_constraintStart_toEndOf="@id/ic_gomart"
@@ -346,8 +346,8 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:layout_marginEnd="14dp"
-                    android:scaleType="fitCenter"
                     android:background="@color/transparant"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/checkin"
                     app:layout_constraintEnd_toStartOf="@id/ic_lainnya"
                     app:layout_constraintStart_toEndOf="@id/ic_gopulsa"
@@ -369,13 +369,12 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:layout_marginEnd="14dp"
-                    android:scaleType="fitCenter"
                     android:background="@color/transparant"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/lainnya"
-                    app:layout_constraintEnd_toStartOf=""
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/ic_check_in"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/dsc_lainnya"
@@ -388,12 +387,386 @@
                     app:layout_constraintTop_toBottomOf="@id/ic_lainnya" />
 
 
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--Section XP-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/xp_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="14dp"
+                android:background="@drawable/round_small"
+                android:elevation="6dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/list_menu_dua">
+
+
+                <ImageView
+                    android:background="@drawable/bg_bintang_dua"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <ImageButton
+                    android:id="@+id/bintang"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/transparant"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/bintang"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/xp_judul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="36 XP lagi ada harta karun"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/bintang"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="14dp"
+                    android:layout_marginBottom="14dp"
+                    android:indeterminateTint="#FF0000"
+                    android:progress="70"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/direction"
+                    app:layout_constraintStart_toStartOf="@id/xp_judul"
+                    app:layout_constraintTop_toBottomOf="@id/xp_judul" />
+
+                <ImageButton
+                    android:id="@+id/direction"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginEnd="14dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/transparant"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/direction"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/progress_bar"
+                    app:layout_constraintTop_toTopOf="parent" />
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <TextView
+                android:id="@+id/akses_cepat"
+                android:text="Akses Cepat"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="14dp"
+                app:layout_constraintTop_toBottomOf="@id/xp_section"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/akses_cepat_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="14dp"
+                android:background="@drawable/round_small"
+                android:elevation="5dp"
+                app:layout_constraintTop_toBottomOf="@id/akses_cepat"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <!--Akses Cepat Stu-->
+                <ImageButton
+                    android:id="@+id/promo"
+                    android:layout_width="32dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="14dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/transparant"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/frame_11"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/pemisah"/>
+
+                <TextView
+                    android:id="@+id/desc_voucher"
+                    android:text="Ada voucher nganggur, nih"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    app:layout_constraintStart_toEndOf="@id/promo"
+                    app:layout_constraintTop_toTopOf="@id/promo"
+                    app:layout_constraintBottom_toBottomOf="@id/promo"/>
+
+                <ImageButton
+                    android:id="@+id/direction_dua"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:layout_marginEnd="14dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/transparant"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/direction"
+                    app:layout_constraintBottom_toBottomOf="@id/desc_voucher"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/desc_voucher" />
+
+                <TextView
+                    android:id="@+id/pemisah"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/abu"
+                    android:layout_marginTop="14dp"
+                    app:layout_constraintTop_toBottomOf="@id/promo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <!--Akses Cepat Dua-->
+                <ImageButton
+                    android:id="@+id/gofood_akses_cepat"
+                    android:layout_width="32dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="14dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/transparant"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/frame_12"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/pemisah" />
+
+                <TextView
+                    android:id="@+id/restoran_terdekat"
+                    android:text="Restoran Terdekat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    app:layout_constraintStart_toEndOf="@id/gofood_akses_cepat"
+                    app:layout_constraintTop_toTopOf="@id/gofood_akses_cepat"
+                    app:layout_constraintBottom_toBottomOf="@id/gofood_akses_cepat"/>
+
+                <ImageButton
+                    android:id="@+id/direction_tiga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:layout_marginEnd="14dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/transparant"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/direction"
+                    app:layout_constraintBottom_toBottomOf="@id/restoran_terdekat"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/restoran_terdekat" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/ic_gopay_dua"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_marginStart="10dp"
+                android:layout_margin="14dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/gopay2"
+                app:layout_constraintTop_toBottomOf="@id/akses_cepat_section"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/promo_gopay"
+                android:text="Promo dari GoPay Jago untuk kamu!"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="14dp"
+                app:layout_constraintTop_toBottomOf="@id/ic_gopay_dua"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/desc_promo_gopay"
+                android:text="Dapatkan voucher Rp 100rb dan bunga 7% sekarang juga!!"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                app:layout_constraintTop_toBottomOf="@id/promo_gopay"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <!--Banner Promo-->
+            <HorizontalScrollView
+                android:id="@+id/banner_promo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/desc_promo_gopay">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/promo_satu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:layout_marginStart="14dp"
+                        android:adjustViewBounds="true"
+                        android:background="@color/transparant"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/banner_satu"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/promo_dua"
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginEnd="14dp"
+                        android:adjustViewBounds="true"
+                        android:background="@color/transparant"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/banner_dua"
+                        app:layout_constraintStart_toEndOf="@id/promo_satu"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </HorizontalScrollView>
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-
     </ScrollView>
+
+    <!--Menu Bawah-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/control_menu_bawah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!--Beranda-->
+        <ImageButton
+            android:id="@+id/ic_beranda"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="14dp"
+            android:scaleType="fitCenter"
+            android:background="@color/transparant"
+            android:src="@drawable/beranda"
+            app:layout_constraintEnd_toStartOf="@id/ic_promo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/desc_home"/>
+
+        <TextView
+            android:id="@+id/desc_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bernda"
+            android:textSize="@dimen/font_size_menu"
+            app:layout_constraintEnd_toEndOf="@id/ic_beranda"
+            app:layout_constraintStart_toStartOf="@id/ic_beranda"
+            app:layout_constraintTop_toBottomOf="@id/ic_beranda"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <!--Promo-->
+        <ImageButton
+            android:id="@+id/ic_promo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="14dp"
+            android:background="@color/transparant"
+            android:scaleType="fitCenter"
+            android:src="@drawable/promo"
+            app:layout_constraintEnd_toStartOf="@id/ic_pesanan"
+            app:layout_constraintStart_toEndOf="@id/ic_beranda"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/desc_feed"/>
+
+        <TextView
+            android:id="@+id/desc_feed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Promo"
+            android:textSize="@dimen/font_size_menu"
+            app:layout_constraintEnd_toEndOf="@id/ic_promo"
+            app:layout_constraintStart_toStartOf="@id/ic_promo"
+            app:layout_constraintTop_toBottomOf="@id/ic_promo"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        <!--Pesanan-->
+        <ImageButton
+            android:id="@+id/ic_pesanan"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="14dp"
+            android:background="@color/transparant"
+            android:scaleType="fitCenter"
+            android:src="@drawable/pesanan"
+            app:layout_constraintEnd_toStartOf="@id/ic_chat"
+            app:layout_constraintStart_toEndOf="@id/ic_promo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/desc_official_store_bottom"/>
+
+        <TextView
+            android:id="@+id/desc_official_store_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pesanan"
+            android:textSize="@dimen/font_size_menu"
+            app:layout_constraintEnd_toEndOf="@id/ic_pesanan"
+            app:layout_constraintStart_toStartOf="@id/ic_pesanan"
+            app:layout_constraintTop_toBottomOf="@id/ic_pesanan"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <!--Chat-->
+        <ImageButton
+            android:id="@+id/ic_chat"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="14dp"
+            android:background="@color/transparant"
+            android:scaleType="fitCenter"
+            android:src="@drawable/chat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ic_pesanan"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/desc_wishlist"
+            tools:ignore="TooManyViews" />
+
+        <TextView
+            android:id="@+id/desc_wishlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pesan"
+            android:textSize="@dimen/font_size_menu"
+            app:layout_constraintEnd_toEndOf="@id/ic_chat"
+            app:layout_constraintStart_toStartOf="@id/ic_chat"
+            app:layout_constraintTop_toBottomOf="@id/ic_chat" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
