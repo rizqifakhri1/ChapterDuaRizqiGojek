@@ -87,9 +87,10 @@
                     android:adjustViewBounds="true"
                     android:scaleType="fitCenter"
                     android:src="@drawable/gpopay_blank"
+                    android:contentDescription="@string/icon"
                     app:layout_constraintBottom_toTopOf="@id/caption_gopay"
                     app:layout_constraintStart_toStartOf="@id/kotak_saldo"
-                    app:layout_constraintTop_toTopOf="@id/kotak_saldo" />
+                    app:layout_constraintTop_toTopOf="@id/kotak_saldo"/>
 
                 <TextView
                     android:id="@+id/caption_gopay"
@@ -110,6 +111,7 @@
                     android:background="@color/transparant"
                     android:scaleType="fitCenter"
                     android:src="@drawable/bayar"
+                    android:contentDescription="@string/icon"
                     app:layout_constraintBottom_toTopOf="@id/desc_bayar"
                     app:layout_constraintEnd_toStartOf="@id/ic_isi_saldo"
                     app:layout_constraintStart_toEndOf="@id/kotak_saldo"
@@ -119,7 +121,7 @@
                     android:id="@+id/desc_bayar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Bayar"
+                    android:text="@string/bayar"
                     android:textColor="@color/white"
                     android:textSize="@dimen/font_size_menu"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -135,6 +137,7 @@
                     android:background="@color/transparant"
                     android:scaleType="fitCenter"
                     android:src="@drawable/isi_saldo"
+                    android:contentDescription="@string/icon"
                     app:layout_constraintBottom_toTopOf="@id/desc_isi_saldo"
                     app:layout_constraintEnd_toStartOf="@id/ic_eksplor"
                     app:layout_constraintStart_toEndOf="@id/bayar"
@@ -144,7 +147,7 @@
                     android:id="@+id/desc_isi_saldo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Isi Saldo"
+                    android:text="@string/isi_saldo"
                     android:textColor="@color/white"
                     android:textSize="@dimen/font_size_menu"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -160,6 +163,7 @@
                     android:background="@color/transparant"
                     android:scaleType="fitCenter"
                     android:src="@drawable/eksplor"
+                    android:contentDescription="@string/icon"
                     app:layout_constraintBottom_toTopOf="@id/desc_eksplor"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/ic_isi_saldo"
@@ -169,7 +173,7 @@
                     android:id="@+id/desc_eksplor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Isi Saldo"
+                    android:text="@string/isi_saldo"
                     android:textColor="@color/white"
                     android:textSize="@dimen/font_size_menu"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -198,6 +202,7 @@
                     android:background="@color/transparant"
                     android:scaleType="fitCenter"
                     android:src="@drawable/goride"
+                    android:contentDescription="@string/icon"
                     app:layout_constraintEnd_toStartOf="@id/ic_gocar"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -206,7 +211,7 @@
                     android:id="@+id/desc_goride"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="GoRide"
+                    android:text="@string/goride"
                     android:textSize="@dimen/font_size_menu"
                     app:layout_constraintEnd_toEndOf="@id/ic_goride"
                     app:layout_constraintStart_toStartOf="@id/ic_goride"
@@ -221,6 +226,7 @@
                     android:background="@color/transparant"
                     android:scaleType="fitCenter"
                     android:src="@drawable/gocar"
+                    android:contentDescription="@string/icon"
                     app:layout_constraintEnd_toStartOf="@id/ic_gofood"
                     app:layout_constraintStart_toEndOf="@id/ic_goride"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -229,7 +235,7 @@
                     android:id="@+id/dsc_gocar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="GoCar"
+                    android:text="@string/gocar"
                     android:textSize="@dimen/font_size_menu"
                     app:layout_constraintEnd_toEndOf="@id/ic_gocar"
                     app:layout_constraintStart_toStartOf="@id/ic_gocar"
@@ -244,6 +250,7 @@
                     android:background="@color/transparant"
                     android:scaleType="fitCenter"
                     android:src="@drawable/gofood"
+                    android:contentDescription="@string/icon"
                     app:layout_constraintEnd_toStartOf="@id/ic_gosend"
                     app:layout_constraintStart_toEndOf="@id/ic_gocar"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -252,7 +259,7 @@
                     android:id="@+id/dsc_gofood"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="GoFood"
+                    android:text="@string/gofood"
                     android:textSize="@dimen/font_size_menu"
                     app:layout_constraintEnd_toEndOf="@id/ic_gofood"
                     app:layout_constraintStart_toStartOf="@id/ic_gofood"
@@ -267,6 +274,7 @@
                     android:background="@color/transparant"
                     android:scaleType="fitCenter"
                     android:src="@drawable/gosend"
+                    android:contentDescription="@string/icon"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/ic_gofood"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -275,7 +283,7 @@
                     android:id="@+id/dsc_gosend"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="GoSend"
+                    android:text="@string/gosend"
                     android:textSize="@dimen/font_size_menu"
                     app:layout_constraintEnd_toEndOf="@id/ic_gosend"
                     app:layout_constraintStart_toStartOf="@id/ic_gosend"
@@ -303,6 +311,7 @@
                     android:background="@color/transparant"
                     android:scaleType="fitCenter"
                     android:src="@drawable/gomart"
+                    android:contentDescription="@string/icon"
                     app:layout_constraintEnd_toStartOf="@id/ic_gopulsa"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -311,7 +320,7 @@
                     android:id="@+id/deac_gomart"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="GoMart"
+                    android:text="@string/gomart"
                     android:textSize="@dimen/font_size_menu"
                     app:layout_constraintEnd_toEndOf="@id/ic_gomart"
                     app:layout_constraintStart_toStartOf="@id/ic_gomart"
@@ -326,6 +335,7 @@
                     android:background="@color/transparant"
                     android:scaleType="fitCenter"
                     android:src="@drawable/gopulsa"
+                    android:contentDescription="@string/icon"
                     app:layout_constraintEnd_toStartOf="@id/ic_check_in"
                     app:layout_constraintStart_toEndOf="@id/ic_gomart"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -334,7 +344,7 @@
                     android:id="@+id/desc_gomart"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="GoPulsa"
+                    android:text="@string/gopulsa"
                     android:textSize="@dimen/font_size_menu"
                     app:layout_constraintEnd_toEndOf="@id/ic_gopulsa"
                     app:layout_constraintStart_toStartOf="@id/ic_gopulsa"
@@ -349,6 +359,7 @@
                     android:background="@color/transparant"
                     android:scaleType="fitCenter"
                     android:src="@drawable/checkin"
+                    android:contentDescription="@string/icon"
                     app:layout_constraintEnd_toStartOf="@id/ic_lainnya"
                     app:layout_constraintStart_toEndOf="@id/ic_gopulsa"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -357,7 +368,7 @@
                     android:id="@+id/dec_check_in"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Check In"
+                    android:text="@string/check_in"
                     android:textSize="@dimen/font_size_menu"
                     app:layout_constraintEnd_toEndOf="@id/ic_check_in"
                     app:layout_constraintStart_toStartOf="@id/ic_check_in"
@@ -372,6 +383,7 @@
                     android:background="@color/transparant"
                     android:scaleType="fitCenter"
                     android:src="@drawable/lainnya"
+                    android:contentDescription="@string/icon"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/ic_check_in"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -380,7 +392,7 @@
                     android:id="@+id/dsc_lainnya"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Lainnya"
+                    android:text="@string/lainnya"
                     android:textSize="@dimen/font_size_menu"
                     app:layout_constraintEnd_toEndOf="@id/ic_lainnya"
                     app:layout_constraintStart_toStartOf="@id/ic_lainnya"
@@ -396,16 +408,17 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="14dp"
                 android:background="@drawable/round_small"
-                android:elevation="6dp"
+                android:elevation="4dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/list_menu_dua">
 
 
                 <ImageView
-                    android:background="@drawable/bg_bintang_dua"
+                    android:background="@drawable/bg_bintang_empat"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
+                    android:contentDescription="@string/icon"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -419,6 +432,7 @@
                     android:background="@color/transparant"
                     android:scaleType="fitCenter"
                     android:src="@drawable/bintang"
+                    android:contentDescription="@string/icon"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -426,7 +440,7 @@
                     android:id="@+id/xp_judul"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="36 XP lagi ada harta karun"
+                    android:text="@string/xp_desc"
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     app:layout_constraintStart_toEndOf="@id/bintang"
@@ -456,6 +470,7 @@
                     android:background="@color/transparant"
                     android:scaleType="fitCenter"
                     android:src="@drawable/direction"
+                    android:contentDescription="@string/icon"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/progress_bar"
@@ -466,12 +481,13 @@
 
             <TextView
                 android:id="@+id/akses_cepat"
-                android:text="Akses Cepat"
+                android:text="@string/akses_cepat"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="14dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginStart="14dp"
                 app:layout_constraintTop_toBottomOf="@id/xp_section"
                 app:layout_constraintStart_toStartOf="parent"/>
 
@@ -481,7 +497,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="14dp"
                 android:background="@drawable/round_small"
-                android:elevation="5dp"
+                android:elevation="4dp"
                 app:layout_constraintTop_toBottomOf="@id/akses_cepat"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent">
@@ -496,13 +512,14 @@
                     android:background="@color/transparant"
                     android:scaleType="fitCenter"
                     android:src="@drawable/frame_11"
+                    android:contentDescription="@string/icon"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toTopOf="@id/pemisah"/>
 
                 <TextView
                     android:id="@+id/desc_voucher"
-                    android:text="Ada voucher nganggur, nih"
+                    android:text="@string/desc_voucher"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="14dp"
@@ -519,6 +536,7 @@
                     android:background="@color/transparant"
                     android:scaleType="fitCenter"
                     android:src="@drawable/direction"
+                    android:contentDescription="@string/icon"
                     app:layout_constraintBottom_toBottomOf="@id/desc_voucher"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="@id/desc_voucher" />
@@ -543,13 +561,14 @@
                     android:background="@color/transparant"
                     android:scaleType="fitCenter"
                     android:src="@drawable/frame_12"
+                    android:contentDescription="@string/icon"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/pemisah" />
 
                 <TextView
                     android:id="@+id/restoran_terdekat"
-                    android:text="Restoran Terdekat"
+                    android:text="@string/restoran_terdekat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="14dp"
@@ -566,6 +585,7 @@
                     android:background="@color/transparant"
                     android:scaleType="fitCenter"
                     android:src="@drawable/direction"
+                    android:contentDescription="@string/icon"
                     app:layout_constraintBottom_toBottomOf="@id/restoran_terdekat"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="@id/restoran_terdekat" />
@@ -582,12 +602,13 @@
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
                 android:src="@drawable/gopay2"
+                android:contentDescription="@string/icon"
                 app:layout_constraintTop_toBottomOf="@id/akses_cepat_section"
                 app:layout_constraintStart_toStartOf="parent"/>
 
             <TextView
                 android:id="@+id/promo_gopay"
-                android:text="Promo dari GoPay Jago untuk kamu!"
+                android:text="@string/desc_promo_gopay"
                 android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -597,7 +618,7 @@
 
             <TextView
                 android:id="@+id/desc_promo_gopay"
-                android:text="Dapatkan voucher Rp 100rb dan bunga 7% sekarang juga!!"
+                android:text="@string/desc_promo_gopay_extend"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="14dp"
@@ -628,6 +649,7 @@
                         android:background="@color/transparant"
                         android:scaleType="fitStart"
                         android:src="@drawable/banner_satu"
+                        android:contentDescription="@string/icon"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -641,8 +663,10 @@
                         android:background="@color/transparant"
                         android:scaleType="fitStart"
                         android:src="@drawable/banner_dua"
+                        android:contentDescription="@string/icon"
                         app:layout_constraintStart_toEndOf="@id/promo_satu"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -673,6 +697,7 @@
             android:scaleType="fitCenter"
             android:background="@color/transparant"
             android:src="@drawable/beranda"
+            android:contentDescription="@string/icon"
             app:layout_constraintEnd_toStartOf="@id/ic_promo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -682,7 +707,7 @@
             android:id="@+id/desc_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bernda"
+            android:text="@string/beranda"
             android:textSize="@dimen/font_size_menu"
             app:layout_constraintEnd_toEndOf="@id/ic_beranda"
             app:layout_constraintStart_toStartOf="@id/ic_beranda"
@@ -698,6 +723,7 @@
             android:background="@color/transparant"
             android:scaleType="fitCenter"
             android:src="@drawable/promo"
+            android:contentDescription="@string/icon"
             app:layout_constraintEnd_toStartOf="@id/ic_pesanan"
             app:layout_constraintStart_toEndOf="@id/ic_beranda"
             app:layout_constraintTop_toTopOf="parent"
@@ -707,7 +733,7 @@
             android:id="@+id/desc_feed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Promo"
+            android:text="@string/promo"
             android:textSize="@dimen/font_size_menu"
             app:layout_constraintEnd_toEndOf="@id/ic_promo"
             app:layout_constraintStart_toStartOf="@id/ic_promo"
@@ -724,6 +750,7 @@
             android:background="@color/transparant"
             android:scaleType="fitCenter"
             android:src="@drawable/pesanan"
+            android:contentDescription="@string/icon"
             app:layout_constraintEnd_toStartOf="@id/ic_chat"
             app:layout_constraintStart_toEndOf="@id/ic_promo"
             app:layout_constraintTop_toTopOf="parent"
@@ -733,7 +760,7 @@
             android:id="@+id/desc_official_store_bottom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pesanan"
+            android:text="@string/pesanan"
             android:textSize="@dimen/font_size_menu"
             app:layout_constraintEnd_toEndOf="@id/ic_pesanan"
             app:layout_constraintStart_toStartOf="@id/ic_pesanan"
@@ -749,6 +776,7 @@
             android:background="@color/transparant"
             android:scaleType="fitCenter"
             android:src="@drawable/chat"
+            android:contentDescription="@string/icon"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/ic_pesanan"
             app:layout_constraintTop_toTopOf="parent"
@@ -759,7 +787,7 @@
             android:id="@+id/desc_wishlist"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pesan"
+            android:text="@string/pesan"
             android:textSize="@dimen/font_size_menu"
             app:layout_constraintEnd_toEndOf="@id/ic_chat"
             app:layout_constraintStart_toStartOf="@id/ic_chat"
