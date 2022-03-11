@@ -9,3 +9,5 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 }
+
+//Test commit dan push setelah ganti nama repository Git
