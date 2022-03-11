@@ -11,3 +11,5 @@ class MainActivity : AppCompatActivity() {
 }
 
 //Test commit dan push setelah ganti nama repository Git
+
+//Test commit dan push kedua
