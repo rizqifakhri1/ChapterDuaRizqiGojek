@@ -23,4 +23,7 @@
     <string name="promo">Promo</string>
     <string name="pesanan">Pesanan</string>
     <string name="pesan">Pesan</string>
+    <string name="eksplor">Eksplor</string>
+    <string name="saldo_gopay">Rp109.048</string>
+    <string name="extend_saldo_gopay">Klik cek Riwayat</string>
 </resources>
